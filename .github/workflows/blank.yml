@@ -16,8 +16,8 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker build -t ghcr.io/ApatiSSS/Docker2:1.0 .
-      - run: docker push ghcr.io/ApatiSSS/Docker2:1.0
+      - run: docker build -t ghcr.io/apatisss/docker2:1.0 .
+      - run: docker push ghcr.io/apatisss/docker2:1.0
   docker_run:
     runs-on: ubuntu-latest
     steps:
@@ -27,5 +27,5 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - run: docker pull ghcr.io/ApatiSSS/Docker2:1.0
-      - run: docker run ghcr.io/ApatiSSS/Docker2:1.0
+      - run: docker pull ghcr.io/apatisss/docker2:1.0
+      - run: docker run ghcr.io/apatisss/docker2:1.0
